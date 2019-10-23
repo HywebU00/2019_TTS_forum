@@ -492,7 +492,9 @@ form {
     }
     .completed_wrap {
         position: relative;
-        background: #fff url(../images/basic/completed_bg.jpg) center right no-repeat;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-color: #FFF;
         background-size: contain;
         box-shadow: 0 0 8px rgba(0, 0, 0, .4);
         padding: 2em 270px 2em 2em;
@@ -501,6 +503,7 @@ form {
         @include screen('mobile') {
             background: inherit;
             padding: 2em;
+            background:none !important;
         }
         &:after {
             content: "";

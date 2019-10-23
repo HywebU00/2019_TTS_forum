@@ -4,10 +4,10 @@
     font-size: .938em;
     position: relative;
     text-align: center;
-    @include screen('mobile'){
+    @include screen('mobile') {
         width: auto;
         height: 2em;
-        padding: .5em 1em ;
+        padding: .5em 1em;
     }
     >a {
         display: block;
@@ -18,35 +18,15 @@
         //padding: .2em 1em;
         position: relative;
         transition: .3s ease-out;
-        // &:after {
-        //     position: absolute;
-        //     right: .8em;
-        //     top: 1em;
-        //     content: "";
-        //     width: 0;
-        //     height: 0;
-        //     border-style: solid;
-        //     border-width: 6px 3px 0 3px;
-        //     border-color: #ffffff transparent transparent transparent;
-        // }
-        // &:before {
-        //     position: absolute;
-        //     width: 1px;
-        //     height: 1.6em;
-        //     right: 2em;
-        //     top: .4em;
-        //     content: "";
-        //     border-left: 1px solid #DDD;
-        // }
         &:focus {
             box-shadow: none;
         }
-        @include screen('mobile'){
+        @include screen('mobile') {
             line-height: 2em;
             &:after {
                 position: absolute;
                 right: .8em;
-                top: 1em;
+                top: .8em;
                 content: "";
                 width: 0;
                 height: 0;
@@ -59,7 +39,7 @@
                 width: 1px;
                 height: 1.6em;
                 right: 2em;
-                top: .4em;
+                top: .2em;
                 content: "";
                 border-left: 1px solid #DDD;
             }
@@ -83,16 +63,23 @@
             a {
                 display: block !important;
                 color: #FFF !important;
-                padding: .5em!important;
+                padding: .5em !important;
                 transition: .3s ease-out;
                 &:hover, &:focus {
                     background: RGBA(0, 0, 0, .3);
                 }
             }
         }
-        @include screen('mobile'){
+        @include screen('mobile') {
             width: 100%;
-            top:2.5em;
+            top: 3em;
+            li {
+                border:none;
+                a {
+                    border:none !important;
+                    background: RGBA(0, 0, 0, .1) !important;
+                }
+            }
         }
     }
 }

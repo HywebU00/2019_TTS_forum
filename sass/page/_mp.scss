@@ -138,7 +138,7 @@
         width: 32px;
         height: 40px;
         margin-left: -16px;
-        background: url(../images/basic/scroll_down_1.png) center no-repeat;
+        background: url(../images/scroll_down_1.png) center no-repeat;
         background-size: contain;
         z-index: 10;
         @include screen('mobile') {
@@ -153,7 +153,7 @@
         width: 32px;
         height: 30px;
         margin-left: -16px;
-        background: url(../images/basic/scroll_down_2.png) center no-repeat;
+        background: url(../images/scroll_down_2.png) center no-repeat;
         background-size: contain;
         z-index: 10;
         animation: icon_down 1s linear infinite;
