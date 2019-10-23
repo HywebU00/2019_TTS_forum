@@ -1,0 +1,30 @@
+.breadcrumb {
+    border-bottom: 1px solid $primaryColor;
+    padding: .1em 15px;
+    font-size: .813em;
+    margin: 0px auto 5px;
+    >p{
+        float: left;
+        margin:0;
+    }
+    ul {
+        @include li-reset;
+        li {
+            display: inline-block;
+            margin: 0px .1em .1em 0px;
+            &:before {
+                @extend %slash;
+            }
+            &:first-child:before {
+                content: "";
+                display: inline-block;
+                color: #666;
+                margin-left: 0;
+                padding: 0;
+            }
+        }
+    }
+    a {
+        @include aSetting_nocolor;
+    }
+}

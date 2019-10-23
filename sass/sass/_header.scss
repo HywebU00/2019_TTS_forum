@@ -1,0 +1,411 @@
+//header
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    &:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        background: rgba(0, 0, 0, .7);
+        top: 0;
+        left: 0;
+    }
+    @extend %clearfix;
+    @include screen('mobile') {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background: #333;
+    }
+    // mobile btn for extend
+    %mobileCtrlBtn {
+        width: 60px !important;
+        height: 70px !important;
+        position: absolute;
+        top: 0px;
+        display: block;
+        font-size: 0em;
+        padding: 15px;
+        margin: 0;
+        min-width: auto;
+        min-height: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        @include box-sizing;
+        @include screen('mobile') {
+            display: block !important;
+            height: 60px !important;
+        }
+    }
+    >.container {
+        max-width: $container-max;
+        overflow: visible;
+        position: relative; // menu
+        @include gutter;
+        padding-right: 150px; //new
+        @include screen('mobile') {
+            @include gutter;
+        }
+        .sidebarCtrl {
+            display: none;
+            left: 0px;
+            @extend %mobileCtrlBtn;
+            span {
+                position: absolute;
+                background: #fff;
+                width: 50%;
+                height: 2px;
+                top: 30%;
+                margin-left: -25%;
+                display: block;
+                width: 30%;
+                left:50%;
+                &:nth-child(2) {
+                    top: 45%;
+                    width: 50%;
+                }
+                &:nth-child(3) {
+                    top: 60%;
+                }
+            }
+        }
+        // search
+        .searchCtrl {
+            right: 100px;
+            font-size: 0em;
+            @extend %mobileCtrlBtn;
+            bottom: 0px !important;
+            top: auto !important;
+            @include screen('mobile') {
+                right: 0;
+            }
+            
+            &:before {
+                width: 60px;
+                height: 70px;
+                background: url(../images/basic/icon_search_w.png) no-repeat center center;
+                background-size: 32px;
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: block;
+                @include screen('mobile') {
+                    width: 40px;
+                    height: 40px;
+                    top: 10px;
+                    left: 10px;
+                    background: url(../images/basic/icon_search_w.png) no-repeat center center;
+                    background-size: 28px;
+                }
+            }
+        }
+    }
+    h1 {
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        width: 225px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        @include box-sizing;
+        @include screen('mobile') {
+            margin-left: 40px;
+            margin-right: 40px;
+            width: 100%;
+            height: 60px;
+        }
+        a {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            object-fit: contain;
+        }
+        @include screen('mobile') {
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+    // 導覽列
+    .navigation {
+        &.have_language {
+            padding-right: 160px;
+        }
+        @extend %clearfix;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: .5em;
+        box-sizing:border-box;
+        ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+            font-size: .938em;
+            list-style: none;
+            &.left_nav {
+                float: left;
+                margin-left: 2em;
+            }
+        }
+        li {
+            float: left;
+            margin: 0 .2em;
+            a {
+                display: inline-block;
+                padding: .5em;
+                text-decoration: none;
+                @include aSetting_nocolor;
+            }
+        }
+        .language {
+            position: absolute;
+            right: 15px;
+            top: .35em;
+            font-size: .75em;
+        }
+    }
+    &.have_language {
+        padding-right: 160px;
+    }
+    ul {
+        float: right;
+        padding: 0;
+        margin: 0;
+        font-size: .938em;
+        list-style: none;
+        &.left_nav {
+            float: left;
+            margin-left: 2em;
+        }
+    }
+    li {
+        float: left;
+        margin: 0 .2em;
+        a {
+            display: inline-block;
+            padding: .5em;
+            text-decoration: none;
+            @include aSetting_nocolor;
+        }
+    }
+    .language {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+//search
+.search {
+    min-width: 0%;
+    max-width: 50%;
+    float: right;
+    vertical-align: middle;
+    padding: 0em .3em 0em;
+    @include box-sizing;
+    position: absolute;
+    display: none;
+    height: 80px;
+    padding: 1em 1em .5em;
+    @include border-radius(0px 0px 6px 6px);
+    right: 0;
+    bottom: -80px;
+    background: RGBA(0, 0, 0, .7);
+    z-index: 9999;
+    label {
+        font-size: 0em;
+    }
+    .form_grp {
+        position: relative;
+        margin-bottom: 0;
+        margin-right: 0 !important;
+        input {
+            margin: -0.2em 0 0;
+            padding: .2em 35px .2em .5em;
+            box-shadow: none;
+            &[type="submit"] {
+                position: absolute;
+                font-size: 0em;
+                width: 30px !important;
+                height: 30px;
+                // max-width:none;
+                // min-width:none;
+                background: url(../images/basic/icon_search.png) no-repeat center center;
+                background-size: 20px;
+                border: none;
+                display: inline-block;
+                //margin-left: -40px !important;
+                margin-top: -2px !important;
+                opacity: .8;
+                right: 0;
+                top: 0;
+                &:hover, &:focus {
+                    opacity: 1;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+    .btn_grp {
+        padding: .2em;
+        margin-bottom: 0;
+        input, input[type="submit"] {
+            margin: 0;
+            padding: .4em 1em .4em !important;
+            font-size: .813em;
+            width: auto;
+            height: auto;
+        }
+    }
+    .keywordHot {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: .5em;
+        //padding: .1em 0 .3em;
+        ul {
+            display: inline-block;
+            font-size: .813em;
+            line-height: 1.65em;
+            margin: 0;
+            padding: 0;
+            &:before {
+                display: inline-block;
+                content: "";
+                color: #999;
+                float: left;
+            }
+            li {
+                margin: 0 .6em 0 0;
+                padding: 0;
+                display: inline-block;
+            }
+            a {
+                @include aSetting_nocolor;
+                color: #fff;
+                &:hover {
+                    color: $linkColor;
+                }
+            }
+        }
+    }
+    // m_search
+    &.m_search {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto;
+        padding: .2em .3em .5em;
+        display: block;
+        height: 120px;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 98;
+        background: #333;
+        label {
+            font-size: 0em;
+            line-height: 0;
+        }
+        .form_grp {
+            width: 65%;
+            height: auto;
+            padding: 0 0 0 5% !important;
+            margin-top: 0;
+            text-align: right;
+            float: left;
+            height: 50px;
+            position: relative;
+            @include box-sizing();
+            input {
+                width: 100%;
+                margin: -0.2em 0 0;
+                padding: .5em 45px .4em .5em;
+                &[type="submit"] {
+                    font-size: 0em;
+                    width: 36px !important;
+                    height: 36px;
+                    padding: 0;
+                    // max-width:none;
+                    // min-width:none;
+                    background: url(../images/basic/icon_search.png) no-repeat center center;
+                    background-size: 24px;
+                    border: none;
+                    display: inline-block;
+                    // margin-left: -50px !important;
+                    position: absolute;
+                    right: 5px;
+                    top: 22px;
+                    opacity: .8;
+                    // outline:1px solid red;
+                    &:hover, &:focus {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .btn_grp {
+            display: inline-block;
+            padding: .2em;
+            margin-bottom: 0;
+            width: 30%;
+            margin-top: 20px;
+            padding-left: 5%;
+            @include box-sizing();
+            input {
+                width: 100% !important;
+                padding: .6em .5em !important;
+                margin: 0;
+            }
+        }
+        .keywordHot {
+            padding-left: 5%;
+            margin-top: 10px;
+            @extend %clearfix;
+            a {
+                color: #FFF;
+                &:hover,
+                &:focus {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+// header fix
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+    background: rgba(0, 0, 0, .75);
+    z-index: 999;
+    @include screen('mobile') {
+        background: #FFF;
+    }
+    .menu {
+        >ul {
+            >li {
+                >a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
