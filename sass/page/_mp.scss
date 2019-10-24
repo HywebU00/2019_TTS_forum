@@ -116,6 +116,9 @@
 .hero_image {
     position: relative;
     padding: 0 !important;
+    .container{
+        @include gutter(0);
+    }
     .img-container {
         @include aspect-ratio(16, 9);
         height: 80vh;
