@@ -29,7 +29,7 @@ $aColor:					#009de0;
 $aHover:					lighten($aColor,10);
 
 // 表單focus顏色
-$form-focus:				#0a80ff;				//表單
+$form-focus:				$secondaryColor;				//表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定

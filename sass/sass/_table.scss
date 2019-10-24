@@ -19,6 +19,9 @@ table {
         }
     }
     th {
+        label{
+            margin-bottom: 0;
+        }
         padding: .7em 1em;
         background-color: #F4F4F4;
         color: #333;
@@ -70,7 +73,7 @@ table {
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: .5em;
+                top: .2em;
                 left: .5em;
                 width: 30%;
                 padding-right: 10px;

@@ -12,12 +12,28 @@
     >a {
         display: block;
         line-height: 70px;
-        background: $primaryColor;
+        background: $secondaryColor;
         box-sizing: border-box;
         color: #FFF;
         //padding: .2em 1em;
         position: relative;
         transition: .3s ease-out;
+        &:before{
+            position:absolute;
+            content:"";
+            border:2px solid #FFF;
+            border-left: none;
+            border-top: none;
+            transform:rotate(45deg);
+            margin-left: -3px;
+            width:.3em;
+            height: .3em;
+            left:50%;
+            bottom:.8em;
+            @include screen('mobile') {
+                display:none;
+            }
+        }
         &:focus {
             box-shadow: none;
         }

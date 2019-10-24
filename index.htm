@@ -20,7 +20,6 @@
         clear: both;
         background: #FFF
     }
-
     .demo_wrap h1 {
         display: block;
         margin: 0px auto;
@@ -28,7 +27,6 @@
         float: left;
         margin-right: 1em
     }
-
     @media screen and (max-width:545px) {
         .demo_wrap h1 {
             max-width: 100%;
@@ -36,19 +34,15 @@
             text-align: center
         }
     }
-
     .demo_wrap h1 img {
         width: 300px
     }
-
     .num {
         width: 12%
     }
-
     body {
         counter-reset: num
     }
-
     table {
         margin-bottom: 1em
     }
@@ -59,14 +53,12 @@
         padding: .5em 0;
         color: #ff5050
     }
-
     tbody tr td:first-child:before {
         counter-increment: num;
         display: block;
         text-align: center;
         content: counters(num, ".") " "
     }
-
     tbody tr td:nth-child(2) {
         width: 35%
     }
@@ -75,7 +67,7 @@
 
 <body>
     <div class="demo_wrap">
-        <h1><img src="images/logo_2.png" alt=""></h1>
+        <h1 style="background-color:#000;"><img src="images/logo.png" alt=""></h1>
         <div class="btn_grp">
             <a href="#" class="btn">切版檔案請按此下載</a>
         </div>
@@ -99,38 +91,43 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td>講者介紹</td>
+                        <td>講者介紹 - 列表</td>
                         <td><a href="cp01.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>講者介紹</td>
+                        <td>講者介紹 - 講者內容</td>
                         <td><a href="cp02.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>議程</td>
-                        <td><a href="schedule01.htm"></a></td>
+                        <td>議程 - 時間軸</td>
+                        <td><a href="schedule_01.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>議程</td>
-                        <td><a href="schedule02.htm"></a></td>
+                        <td>議程 - 表格</td>
+                        <td><a href="schedule_02.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>報名</td>
-                        <td><a href="apply01.htm"></a></td>
+                        <td>報名 </td>
+                        <td><a href="apply_01.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>報名</td>
-                        <td><a href="apply02.htm"></a></td>
+                        <td>報名 - 會員登入</td>
+                        <td><a href="apply_02.htm"></a></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>報名</td>
-                        <td><a href="apply03.htm"></a></td>
+                        <td>報名 - 確認報名資料</td>
+                        <td><a href="apply_03.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>報名 - 報名完成</td>
+                        <td><a href="apply_04.htm"></a></td>
                     </tr>
                 </tbody>
             </table>

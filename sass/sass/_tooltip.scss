@@ -19,17 +19,17 @@ $tooltop-font-size:$font-size;
 }
 [tooltip]:after {
     content: attr(tooltip);
-    text-align: left;
-    min-width: 150px;
+    text-align: center;
+    min-width: 100px;
     line-height: 1.5em;
-    max-width: 300px;
+    max-width: 200px;
     font-size: .813em;
-    max-height: (($tooltop-font-size*.813)*1.5)*4.25; 
+    max-height: (($tooltop-font-size*.813)*1.5)*4.25;
     overflow: hidden;
     padding: .5em;
     border-radius: 4px;
     box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
-    background: #333;
+    background: rgba(51, 51, 51, .7);
     color: #fff;
     z-index: 1000;
     @include box-sizing();
@@ -46,7 +46,7 @@ $tooltop-font-size:$font-size;
 [tooltip][flow^="up"]:before {
     bottom: 100%;
     border-bottom-width: 0;
-    border-top-color: #333;
+    border-top-color: rgba(51, 51, 51, .7);
 }
 [tooltip]:not([flow]):after,
 [tooltip][flow^="up"]:after {
@@ -62,7 +62,7 @@ $tooltop-font-size:$font-size;
 [tooltip][flow^="down"]:before {
     top: 100%;
     border-top-width: 0;
-    border-bottom-color: #333;
+    border-bottom-color: rgba(51, 51, 51, .7);
 }
 [tooltip][flow^="down"]:after {
     top: calc(100% + 5px);
@@ -75,7 +75,7 @@ $tooltop-font-size:$font-size;
 [tooltip][flow^="left"]:before {
     top: 50%;
     border-right-width: 0;
-    border-left-color: #333;
+    border-left-color: rgba(51, 51, 51, .7);
     left: calc(0em - 5px);
     transform: translate(-.5em, -50%);
 }
@@ -87,7 +87,7 @@ $tooltop-font-size:$font-size;
 [tooltip][flow^="right"]:before {
     top: 50%;
     border-left-width: 0;
-    border-right-color: #333;
+    border-right-color: rgba(51, 51, 51, .7);
     right: calc(0em - 5px);
     transform: translate(.5em, -50%);
 }

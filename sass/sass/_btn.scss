@@ -2,7 +2,7 @@
 $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
 $btn-padding:.5em 2em;
-$btn-radius:.4em;
+$btn-radius:.3em;
 // 按鈕外框
 .btn_grp {
     text-align: center;
@@ -18,16 +18,16 @@ $btn-radius:.4em;
     background: $btn-bg;
     border: 1px solid darken($btn-bg, 10);
     color: $btn-font-color;
-    box-shadow:0px 2px 2px RGBA(0, 0, 0, .08);
-    border-radius:$btn-radius;
-    &:hover,&:focus {
+    box-shadow: 0px 2px 2px RGBA(0, 0, 0, .08);
+    border-radius: $btn-radius;
+    &:hover, &:focus {
         background: darken($btn-bg, 10);
         cursor: pointer;
         color: #FFF;
     }
-    &:focus{
+    &:focus {
         @include box-shadow(0px 0px 0px 3px lighten($btn-bg, 25));
-        outline:none;
+        outline: none;
     }
     &.active {
         background: lighten($btn-bg, 5);
@@ -56,7 +56,7 @@ $btn-radius:.4em;
     touch-action: manipulation;
     @include box-sizing;
     @include btn_setting();
-    text-shadow:RGBA(0, 0, 0, .3) 0px 0px 0px;
+    text-shadow: RGBA(0, 0, 0, .3) 0px 0px 0px;
     @include gradient(#f7f7f7, #DADADA, vertical);
     transition: .3s ease-out;
     &:hover,
@@ -91,9 +91,32 @@ $btn-radius:.4em;
     @extend %btn;
     @include btn_setting($color-purple, #FFF);
 }
-.btn-gray{
+.btn-gray {
     @extend %btn;
     @include btn_setting(darken($color-gray, 20), #FFF);
+}
+.btn-primary {
+    @extend %btn;
+    @include btn_setting(darken($secondaryColor, 20), #FFF);
+    padding: .5em 2em !important;
+    font-size: 1.25em;
+    background: $secondaryColor;
+    border: $secondaryColor 1px solid;
+    &:hover, &:focus {
+        border: 1px solid darken($secondaryColor, 10);
+        background: darken($secondaryColor, 10);
+    }
+}
+.btn-reset {
+    @extend .btn-gray;
+    padding: .5em 2em !important;
+    font-size: 1.25em;
+    background: darken($color-gray, 30);
+    border: darken($color-gray, 30) 1px solid;
+    &:hover, &:focus {
+        border: 1px solid darken($color-gray, 40);
+        background: darken($color-gray, 40);
+    }
 }
 // 按鈕大小
 .btn-xl {
