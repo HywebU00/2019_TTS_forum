@@ -38,14 +38,15 @@
             @include screen('mobile') {
                 display: none;
             }
-            &:before {
+            .num{
                 position: absolute;
                 top: 9px;
                 left: 10px;
-                text-align: right;
+                text-align: left;
                 width: 30px;
-                counter-increment: num;
-                content: counters(num, ".") " . ";
+                &:after{
+                    content:".";
+                }
             }
             // &:first-child {
             //     border-radius: 4px 0 0 4px;
@@ -59,6 +60,9 @@
                 background: $secondaryColor;
                 color: #fff;
                 border-color: $secondaryColor;
+
+            }
+            &.now{
                 @include screen('mobile') {
                     display: block;
                     float: none;

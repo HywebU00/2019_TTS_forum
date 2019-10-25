@@ -83,6 +83,7 @@ h1.title {
             margin: 1.5em 0;
             @include screen('mobile') {
                 margin: 1em 0;
+                @include gutter(6px);
             }
             min-height:auto !important;
             a {

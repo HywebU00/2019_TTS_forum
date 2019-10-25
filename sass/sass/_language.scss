@@ -62,7 +62,7 @@
         }
     }
     ul {
-        background: #555;
+        background: darken($secondaryColor,10);
         padding: 1em 1.5em;
         position: absolute;
         top: 70px;
@@ -82,7 +82,7 @@
                 padding: .5em !important;
                 transition: .3s ease-out;
                 &:hover, &:focus {
-                    background: RGBA(0, 0, 0, .3);
+                    background: RGBA(0, 0, 0, .3) !important;
                 }
             }
         }

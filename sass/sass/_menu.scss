@@ -168,7 +168,7 @@
             color: #FFF;
             width: 100%;
             height: 3em;
-            background: $primaryColor;
+            background: $secondaryColor;
             padding: 0 1em;
             line-height: 3em;
             @include box-sizing;
@@ -179,7 +179,7 @@
         top: 0;
         left: 0;
         height: 100%;
-        background: $primaryColor;
+        background: $secondaryColor;
         overflow:hidden;
         overflow-y: auto;
         z-index: 9999;
@@ -301,7 +301,7 @@
                 a{
                     background: $primaryColor;
                     padding-left: 1em !important;
-                    
+
                 }
             }
         }
