@@ -4,3 +4,5 @@
 *.scss.map
 *.rb
 .vscode
+.DS_Store
+# 忽略 secret.yml 檔案
