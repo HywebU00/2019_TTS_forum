@@ -64,7 +64,6 @@
                         <li><a href="#">報名查詢</a></li>
                     </ul>
                 </nav>
-                <!-- menu End -->
                 <div class="language">
                     <a href="#">繁體中文</a>
                     <ul>
@@ -123,76 +122,70 @@
             </section>
             <section class="sp">
                 <div class="container">
-                    <div class="now_join">
-                        <div class="btn_grp">
-                            <button class="btn btn-primary">我是會員，登入報名</button>
-                        </div>
-                        <p>非會員請直接填寫報名資料</p>
-                    </div>
-                    <div class="step">
-                        <ol>
-                           <li class="this_step now"><span class="num">1</span>填寫報名資料</li>
-                            <li><span class="num">2</span>確認報名資料</li>
-                            <li><span class="num">3</span>線上付款</li>
-                            <li><span class="num">4</span>報名完成</li>
-                        </ol>
-                    </div>
-                    <!-- 如果有需要說明才顯示 -->
-                    <div class="notice">
-                        <p>報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項報名說明注意事項。</p>
+                    <div class="schedule_info">
+                        <ul>
+                            <li class="date">
+                                <div class="title">日期</div>
+                                <p>2019.03.28</p>
+                            </li>
+                            <li class="time">
+                                <div class="title">時間</div>
+                                <p>09:00 ~ 16:00</p>
+                            </li>
+                            <li class="location">
+                                <div class="title">地點</div>
+                                <p>南港展覽館1館401會議室<a href=""><i class="i_location"></i>觀看地圖</a></p>
+                            </li>
+                        </ul>
                     </div>
                     <form action="" class="has_counter">
                         <div class="form_grid">
                             <div class="shadow_grp">
-                                <h3>請填寫公司資訊</h3>
+                                <button class="fixed_btn">修改/儲存</button>
+                                <h3>公司資訊</h3>
                                 <div class="form_grp_wrap">
                                     <div class="form_grp">
                                         <label for="" class="form_title">統一編號</label>
                                         <div class="form_content">
-                                            <input type="text" id="" value="" placeholder="16541333">
-                                            <button class="btn btn-xs">帶入公司資料</button>
+                                            <input type="text" id="" value="16541333" readonly>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司</label>
                                         <div class="form_content">
-                                            <input type="text" id="" value="" placeholder="凌網科技股份有限公司">
+                                            <input type="text" id="" value="凌網科技股份有限公司" readonly>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司電話</label>
                                         <div class="form_content form_inline">
-                                            <input type="text" id="" class="short" value="" placeholder="02">
-                                            <input type="text" id="" value="" placeholder="87451263">
+                                            <input type="text" id="" class="short" value="02" readonly>
+                                            <input type="text" id="" value="87451263" readonly>
                                             <div class="form_content_inline">
                                                 <label for="">分機</label>
-                                                <input type="text" id="" class="short" value="" placeholder="1451">
+                                                <input type="text" id="" class="short" value="1451" readonly>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <label for="" class="form_title">公司傳真</label>
                                         <div class="form_content form_inline">
-                                            <input type="text" id="" class="short" value="" placeholder="02">
-                                            <input type="text" id="" value="" placeholder="87451263">
+                                            <input type="text" id="" class="short" value="02" readonly>
+                                            <input type="text" id="" value="87451263" readonly>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <label for="" class="form_title">郵遞區號</label>
                                         <div class="form_content form_inline">
-                                            <input type="text" id="" class="short" value="" placeholder="100">
+                                            <input type="text" id="" class="short" value="100" readonly>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <label for="" class="form_title">公司地址</label>
                                         <div class="form_content form_inline">
-                                            <select name="" id="">
-                                                <option value="台北市">台北市</option>
-                                            </select>
-                                            <select name="" id="">
-                                                <option value="台北市">中正區</option>
-                                            </select>
-                                            <input type="text" id="" value="" placeholder="重慶南路二段51號">
+                                            <input type="text" id="" class="short" value="台北市" readonly>
+                                            <input type="text" id="" class="short" value="中正區" readonly>
+                                            <input type="text" id="" value="重慶南路二段51號" readonly>
                                         </div>
                                     </div>
                                     <div class="form_grp">
@@ -200,10 +193,7 @@
                                             <legend class="form_title">發票類型</legend>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio1" value="" checked="">三聯式</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio1" value="">兩聯式</label>
+                                                    <input type="text" id="" class="short" value="三聯式" readonly>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -211,17 +201,9 @@
                                     <div class="form_grp">
                                         <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>發票寄送地址</label>
                                         <div class="form_content form_inline">
-                                            <select name="" id="">
-                                                <option value="台北市">台北市</option>
-                                            </select>
-                                            <select name="" id="">
-                                                <option value="台北市">中正區</option>
-                                            </select>
-                                            <input type="text" id="" value="" placeholder="重慶南路二段51號">
-                                            <div class="check_grp form_content_inline">
-                                                <label>
-                                                    <input type="checkbox" name="" value="" checked="">同公司地址</label>
-                                            </div>
+                                            <input type="text" id="" class="short" value="台北市" readonly>
+                                            <input type="text" id="" class="short" value="中正區" readonly>
+                                            <input type="text" id="" value="重慶南路二段51號" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -230,45 +212,41 @@
                         <!--form_grid END-->
                         <div class="form_grid">
                             <div class="shadow_grp">
+                                <button class="fixed_btn">修改/儲存</button>
                                 <h3>填寫報名資料</h3>
                                 <div class="form_grp_wrap ">
                                     <div class="apply_wrap">
-                                        <h4 class="dropdown_item"><a href="#">第<span>1</span>位參加者</a></h4>
-                                        <div class="dropdown_content">
-                                            <button class="del_btn"><i class="i_delete invert"></i>刪除</button>
+                                        <h4><a href="#">第<span>1</span>位參加者</a></h4>
+                                        <div class="show_content">
                                             <div class="apply_grp">
                                                 <h5>參加者資料</h5>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="王小明">
+                                                        <input type="text" id="" value="王小明" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>職稱</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="業務經理">
+                                                        <input type="text" id="" value="業務經理" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡電話</label>
                                                     <div class="form_content form_inline">
-                                                        <input type="text" id="" class="short" value="" placeholder="02">
-                                                        <input type="text" id="" value="" placeholder="87451263">
+                                                        <input type="text" id="" class="short" value="02" readonly>
+                                                        <input type="text" id="" value="87451263" readonly>
                                                         <div class="form_content_inline">
                                                             <label for="">分機</label>
-                                                            <input type="text" id="" class="short" value="" placeholder="1451">
-                                                        </div>
-                                                        <div class="check_grp form_content_inline">
-                                                            <label>
-                                                                <input type="checkbox" name="" value="" checked="">同公司電話</label>
+                                                            <input type="text" id="" class="short" value="1451" readonly>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="abc@gmail.com">
+                                                        <input type="text" id="" value="abc@gmail.com" readonly>
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,7 +257,6 @@
                                                     <table summary="">
                                                         <thead>
                                                             <tr>
-                                                                <th><label><input type="checkbox" name="" value="">報名</label></th>
                                                                 <th>內容</th>
                                                                 <th>說明</th>
                                                                 <th>價格</th>
@@ -287,27 +264,23 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>自行車設計</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="內容">自行車設計</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
                                                                 <td data-title="價格" class="price"><span>NT.</span>100</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>騎行文化</td>
-                                                                <td class="describe">人類社會對於自行車的需求未降低，而是型態轉變－自單純的交通工具， 轉化為特定時空的社會工具</td>
+                                                                <td data-title="內容">騎行文化</td>
+                                                                <td class="describe" data-title="說明">人類社會對於自行車的需求未降低，而是型態轉變－自單純的交通工具， 轉化為特定時空的社會工具</td>
                                                                 <td data-title="價格" class="price"><span>NT.</span>120</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>E-Bike趨勢</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="內容">E-Bike趨勢</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
                                                                 <td data-title="價格" class="price"><span>NT.</span>140</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>未來城市藍圖</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="內容">未來城市藍圖</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
                                                                 <td data-title="價格" class="price"><span>NT.</span>100</td>
                                                             </tr>
                                                         </tbody>
@@ -322,10 +295,7 @@
                                                         <legend class="form_title">午餐</legend>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label>
-                                                                    <input type="radio" name="radioSample2" value="" checked="">葷食</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample2" value="">素食</label>
+                                                                <input type="text" value="葷食" readonly>
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -335,12 +305,7 @@
                                                         <legend class="form_title">衣服</legend>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="" checked="">L</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="">M</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="">S</label>
+                                                                <input type="text" name="" value="L" readonly>
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -352,42 +317,37 @@
                                     </div>
                                     <!--apply_wrap END-->
                                     <div class="apply_wrap">
-                                        <h4 class="dropdown_item"><a href="#">第<span>2</span>位參加者</a></h4>
-                                        <div class="dropdown_content">
-                                            <button class="del_btn"><i class="i_delete invert"></i>刪除</button>
+                                        <h4><a href="#">第<span>2</span>位參加者</a></h4>
+                                        <div class="show_content">
                                             <div class="apply_grp">
                                                 <h5>參加者資料</h5>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="王小明">
+                                                        <input type="text" id="" value="王小明" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>職稱</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="業務經理">
+                                                        <input type="text" id="" value="業務經理" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡電話</label>
                                                     <div class="form_content form_inline">
-                                                        <input type="text" class="short" id="" value="" placeholder="02">
-                                                        <input type="text" id="" value="" placeholder="87451263">
+                                                        <input type="text" id="" class="short" value="02" readonly>
+                                                        <input type="text" id="" value="87451263" readonly>
                                                         <div class="form_content_inline">
                                                             <label for="">分機</label>
-                                                            <input type="text" class="short" id="" value="" placeholder="1451">
-                                                        </div>
-                                                        <div class="check_grp form_content_inline">
-                                                            <label>
-                                                                <input type="checkbox" name="" value="" checked="">同公司電話</label>
+                                                            <input type="text" id="" class="short" value="1451" readonly>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
                                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail</label>
                                                     <div class="form_content">
-                                                        <input type="text" id="" value="" placeholder="abc@gmail.com">
+                                                        <input type="text" id="" value="abc@gmail.com" readonly>
                                                     </div>
                                                 </div>
                                             </div>
@@ -398,7 +358,6 @@
                                                     <table summary="">
                                                         <thead>
                                                             <tr>
-                                                                <th><label><input type="checkbox" name="" value="">報名</label></th>
                                                                 <th>內容</th>
                                                                 <th>說明</th>
                                                                 <th>價格</th>
@@ -406,28 +365,24 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>自行車設計</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="內容">自行車設計</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
                                                                 <td data-title="價格" class="price"><span>NT.</span>100</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>騎行文化</td>
-                                                                <td class="describe">人類社會對於自行車的需求未降低，而是型態轉變－自單純的交通工具， 轉化為特定時空的社會工具</td>
-                                                                <td class="price"><span>NT.</span>120</td>
+                                                                <td data-title="內容">騎行文化</td>
+                                                                <td class="describe" data-title="說明">人類社會對於自行車的需求未降低，而是型態轉變－自單純的交通工具， 轉化為特定時空的社會工具</td>
+                                                                <td data-title="價格" class="price"><span>NT.</span>120</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>E-Bike趨勢</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
-                                                                <td class="price"><span>NT.</span>140</td>
+                                                                <td data-title="內容">E-Bike趨勢</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="價格" class="price"><span>NT.</span>140</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="apply_check"><input type="checkbox" name="" value=""></td>
-                                                                <td>未來城市藍圖</td>
-                                                                <td class="describe">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
-                                                                <td class="price"><span>NT.</span>100</td>
+                                                                <td data-title="內容">未來城市藍圖</td>
+                                                                <td class="describe" data-title="說明">從產品發展沿革來看，自行車是少數構型變化不大的物件。隨著科技進步，人們生活</td>
+                                                                <td data-title="價格" class="price"><span>NT.</span>100</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -441,10 +396,7 @@
                                                         <legend class="form_title">午餐</legend>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label>
-                                                                    <input type="radio" name="radioSample2" value="" checked="">葷食</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample2" value="">素食</label>
+                                                                <input type="text" value="葷食" readonly>
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -454,12 +406,7 @@
                                                         <legend class="form_title">衣服</legend>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="" checked="">L</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="">M</label>
-                                                                <label>
-                                                                    <input type="radio" name="radioSample3" value="">S</label>
+                                                                <input type="text" name="" value="L" readonly>
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -468,10 +415,6 @@
                                             <!--apply_grp END-->
                                         </div>
                                         <!--dropdown_content END-->
-                                    </div>
-                                    <!--apply_wrap END-->
-                                    <div class="add_participant">
-                                        <button tooltip="新增參加者" flow="left"><i class="i_close invert"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -479,56 +422,46 @@
                         </div>
                         <!--form_grid END-->
                         <div class="form_grid">
-                            <div class="shadow_grp">
-                                <h3>上傳資料</h3>
-                                <div class="form_grp_wrap">
-                                    <div class="form_grp">
-                                        <div class="form_title">請上傳審核資料</div>
-                                        <div class="form_content">
-                                            <div class="upload_grp">
-                                                <input class="upload_file" type="text" readonly>
-                                                <div class="upload_btn">
-                                                    <span>上傳檔案</span>
-                                                    <input type="file" class="check_file btn" />
-                                                </div>
-                                                <div class="progress_bar">
-                                                    <span style="width:70%"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_grp">
-                                        <div class="form_title">已上傳檔案：</div>
-                                        <div class="form_content">
-                                            <div class="file_list">
-                                                <ul>
-                                                    <li>名片.jpg<a href="#" class="delete"><img src="images/basic/icon_close.svg" alt=""></a></li>
-                                                    <li>資格證明.PDF<a href="#" class="delete"><img src="images/basic/icon_close.svg" alt=""></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="shadow_grp bill">
+                                <h3>付款資訊</h3>
+                                <div class="table_list">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>金額</th>
+                                                <th>折扣碼優惠</th>
+                                                <th>總金額</th>
+                                                <th>付款時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span>NT.</span>400</td>
+                                                <td><span>NT.</span>-100</td>
+                                                <td class="price"><span>NT.</span>300</td>
+                                                <td><time>2019-1-15 15:03</time></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="discount">
-                            <p>早鳥報名享有每場次100元優惠價，<br>報名兩場次以上享有8折優惠</p>
-                        </div>
                         <!--form_grid END-->
                         <div class="form_bottom">
-                             <div class="btn_grp">
+                            <div class="btn_grp">
                                 <button class="btn btn-reset">取消</button>
                                 <button class="btn btn-primary">確認</button>
                             </div>
                             <div class="note">
                                 <p><strong>※ 研習時數：本論壇活動適用公務人員終身學習認證課程，參與者可獲登學習時數3小時／場（最多可獲12小時）。公務人員請於 1)本表填妥後，2)另外於Google表單填妥才符合申請資格：(<a href="#">點此連結</a>)。</strong></p>
-                                <p>以下個人資料僅供本會108-112年度透過電話、郵件等通訊方式與提供資料之個人聯繫接洽用。<br> 提供資料之個人可就其個人資料： <ol>
-                                        <li>查詢或請求閱覽。</li>
-                                        <li>請求制給複制本。</li>
-                                        <li>請求補充或更正。</li>
-                                        <li>請求停止蒐集、處理或利用。</li>
-                                        <li>請求刪除。</li>
-                                    </ol> 如欲行使以上權利可洽本展承辦人，電話: 02-2725-5200，梁小姐分機2767。</p>
+                                <p>以下個人資料僅供本會108-112年度透過電話、郵件等通訊方式與提供資料之個人聯繫接洽用。<br> 提供資料之個人可就其個人資料： </p>
+                                <ol>
+                                    <li>查詢或請求閱覽。</li>
+                                    <li>請求制給複制本。</li>
+                                    <li>請求補充或更正。</li>
+                                    <li>請求停止蒐集、處理或利用。</li>
+                                    <li>請求刪除。</li>
+                                </ol> 如欲行使以上權利可洽本展承辦人，電話: 02-2725-5200，梁小姐分機2767。<p></p>
                             </div>
                         </div>
                     </form>

@@ -1,14 +1,14 @@
 .modal {
     position: fixed;
     display: none;
-    width: 420px;
+    width: 500px;
     height: 420px;
     background: #FFF;
     z-index: 999999;
     top: 30%;
     left: 50%;
     margin-top: -150px;
-    margin-left: -210px;
+    margin-left: -250px;
     padding: 1em 1em 1em;
     @include box-sizing;
     border-radius: 8px;
@@ -20,24 +20,24 @@
         color: $color-red;
         margin-left: .9em;
         font-size: .813em;
-        display:block;
+        display: block;
         line-height: 1.35em;
     }
-    input.id{
-        background:url(../images/icon/icon_man.svg) no-repeat .2em .5em #f8f8f8;
+    input.id {
+        background: url(../images/icon/icon_man.svg) no-repeat .2em .5em #f8f8f8;
         background-size: 20px;
         padding-left: 1.8em;
     }
-    input.pw{
-        background:url(../images/icon/icon_lock.svg) no-repeat .4em .6em #f8f8f8;
+    input.pw {
+        background: url(../images/icon/icon_lock.svg) no-repeat .4em .6em #f8f8f8;
         background-size: 16px;
         padding-left: 1.8em;
     }
-    .btn-primary{
-        font-size:1em;
+    .btn-primary {
+        font-size: 1em;
     }
-    .btn-reset{
-        font-size:1em;
+    .btn-reset {
+        font-size: 1em;
     }
     ul.member_function {
         position: absolute;

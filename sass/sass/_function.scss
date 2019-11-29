@@ -206,8 +206,14 @@ div.function {
         }
     }
 }
-.calendar{
+.calendar,.modify{
     display: inline-block;
+    margin-right: 1em;
+    box-sizing:border-box;
+    @include screen('xs_mobile') {
+        display:block;
+        margin-right: 0;
+    }
     a{
         display: block;
         height: 40px;
@@ -219,10 +225,18 @@ div.function {
         border-radius: 2px;
         color:$lightColor;
         line-height: 40px;
+        min-width: 150px;
+        @include screen('xs_mobile') {
+            width:250px;
+            min-width: 250px;
+            display:block;
+            margin: 0 auto 1em;
+        }
         i{
             &:before{
-                height: 30px;
-                width: 30px;
+                height: 25px;
+                width: 25px;
+                margin-right: .5em;
             }
         }
         img{
@@ -235,4 +249,13 @@ div.function {
         }
     }
 
+}
+.modify{
+    a{
+        background: $secondaryColor;
+        color:#FFF;
+        &:hover,&:focus {
+            background: darken($secondaryColor,10)
+        }
+    }
 }
