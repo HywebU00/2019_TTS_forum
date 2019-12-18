@@ -35,6 +35,10 @@
                 @include screen('tablet'){
                     font-size: 1em;
                 }
+                &:hover,&:focus {
+                    background:$secondaryColor;
+                    color:#FFF;
+                }
             }
             &.hasChild {
                 >a {

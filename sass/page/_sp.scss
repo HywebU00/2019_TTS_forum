@@ -123,23 +123,23 @@ form {
             padding-bottom: 1.5em;
             padding: .5em;
             padding-bottom: 1em;
-            position:relative;
+            position: relative;
             &>h3 {
                 margin-left: .5em;
             }
-             .fixed_btn{
-                position:absolute;
+            .fixed_btn {
+                position: absolute;
                 background: $secondaryColor;
-                display:block;
-                color:#FFF;
-                width:120px;
-                padding:.5em 1em;
-                right:1.5em;
-                top:.5em;
-                transition:.3s ease-out;
+                display: block;
+                color: #FFF;
+                width: 120px;
+                padding: .5em 1em;
+                right: 1.5em;
+                top: .5em;
+                transition: .3s ease-out;
                 z-index: 2;
-                &:hover,&:focus {
-                    background: darken($secondaryColor,15)
+                &:hover, &:focus {
+                    background: darken($secondaryColor, 15)
                 }
             }
         }
@@ -250,8 +250,7 @@ form {
             max-width: 350px;
         }
         .apply_wrap {
-            position:relative;
-
+            position: relative;
             margin: 0 1em;
             @include screen('mobile') {
                 margin: 0 .5em;
@@ -803,6 +802,7 @@ form {
             }
             @include screen('xs_mobile') {
                 bottom: 3.5em;
+                display:none;
             }
         }
         .print {
@@ -959,4 +959,100 @@ form {
             left: 30%;
         }
     }
+}
+.result {
+    ul {
+        @include li-reset;
+        li {
+            position: relative;
+            min-height: 4em;
+            background: #F5F5F5;
+            margin: 0px 0em 1em;
+            overflow: hidden;
+            padding: .8em;
+            &:hover {
+                h3 {
+                    color: #FFF;
+                    border-bottom: 1px solid #FFF;
+                }
+                .num {
+                    color: #FFF;
+                }
+                p{
+                    color:#FFF;
+                }
+                .keyword{
+                    color:$color-yellow;
+                }
+                background:$secondaryColor;
+            }
+            @include screen('xs_mobile') {
+                padding: 2.4em .5em 2em;
+                h3 {
+                    margin: 0 .5em .5em;
+                    overflow: hidden;
+                }
+                p {
+                    margin: 0 .8em;
+                    overflow: hidden;
+                }
+                .pic {
+                    float: right;
+                    width: 75px;
+                    margin: 0 auto 1em 1em;
+                }
+            }
+        }
+        .num {
+            position: absolute;
+            top: .8em;
+            left: 1em;
+            font-weight: bold;
+            &:after {
+                content: ".";
+            }
+        }
+        .keyword {
+            color: red;
+            display: inline-block;
+            margin: 0 .2em;
+        }
+        h3 {
+            color: #333;
+            line-height: 1.35em;
+            font-size: 1.125em;
+            margin: 0 0 .5em 30px;
+            max-width: 700px;
+            padding-bottom: .5em;
+            overflow: hidden;
+            font-weight: bold;
+            border-bottom: 1px solid #555;
+        }
+        p {
+            font-size: .813em;
+            margin: 0 0 0 30px;
+            max-width: 650px;
+            overflow: hidden;
+        }
+        a {
+            color: #666;
+            &:hover, &:focus {
+                color: #222;
+            }
+        }
+        .pic {
+            width: 120px;
+            float: right;
+            margin: 0 .5em .2em .5em;
+            border: 1px solid #DDD;
+            padding: 0;
+            background: #FFF;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.keyword {
+    color: red;
 }

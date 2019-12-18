@@ -60,6 +60,7 @@ table {
         }
         tr {
             border: 1px solid #ccc;
+            border-bottom: 1px solid #666;
             margin-bottom: 10px; // background-color: #333;
         }
         td {
@@ -67,20 +68,21 @@ table {
             border: none !important;
             border-bottom: 1px solid #eee !important;
             position: relative;
-            padding-left: 35% !important;
             white-space: normal;
             text-align: left;
+            padding-top: 1.5em !important;
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: .2em;
-                left: .5em;
-                width: 30%;
+                top: .1em;
+                left: 1em;
+                width: 100%;
+                font-size: .75em;
                 padding-right: 10px;
                 white-space: nowrap;
                 text-align: left;
-                font-weight: bold;
-                color: #000;
+                font-weight: normal;
+                color: #999;
             }
         }
     }

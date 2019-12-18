@@ -2,7 +2,13 @@
 $(function() {
     // lazyload
     //可以指定你想要的元素做lazyload
-    $("img").lazyload({ effect: "fadeIn" });
+    // var lazyLoadInstance = new LazyLoad({
+    //     elements_selector: "img.lazy",
+    //     placeholder: '/images/basic/placeholder.gif',
+    //     effect: "fadeIn",
+    //     fadeTime: 600,
+    //     threshold: 0
+    // });
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,

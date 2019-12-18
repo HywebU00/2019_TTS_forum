@@ -7,6 +7,17 @@ img {
         //圓形
         @include border-radius(50%);
     }
+    &.loaded{
+        animation: img_fade .5s ease-out;
+    }
+}
+@keyframes img_fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:100;
+    }
 }
 // 設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit
 /*for IE */
@@ -99,3 +110,5 @@ img {
 .scale-down {
     object-fit: scale-down;
 }
+
+
