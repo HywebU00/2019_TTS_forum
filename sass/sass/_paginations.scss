@@ -115,6 +115,8 @@
         padding: .5em;
         select {
             margin: 0px .5em;
+            display:inline-block;
+            width:4em;
             @include screen('mobile') {
                 margin: 0px;
             }
