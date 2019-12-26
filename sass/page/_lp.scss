@@ -166,10 +166,12 @@
             &.file {
                 a {
                     position: relative;
-                    display: inline-block;
+                    display: block;
+                    width:6em;
                     padding-left: 30px;
                     color: #555;
                     margin-bottom: .5em;
+                    @include text-overflow;
                     &:before {
                         content: "";
                         background: url(../images/basic/icon_pdf.png);
