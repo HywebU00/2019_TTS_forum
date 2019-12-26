@@ -1,5 +1,6 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    $('.hero_image').find('img').addClass('cover');
     // lazyload
     //可以指定你想要的元素做lazyload
     // var lazyLoadInstance = new LazyLoad({
