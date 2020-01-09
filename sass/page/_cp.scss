@@ -562,6 +562,11 @@ div.tag {
 }
 .schedule_select {
     margin: 1em 0;
+    .container{
+        @include screen('mobile') {
+            @include gutter(0);
+        }
+    }
     .form_grp {
         @include make-xs-column(12);
         @include make-sm-column(6);
@@ -606,6 +611,41 @@ div.tag {
             &:checked+label {
                 background-image: linear-gradient(to bottom, #0087ef, #0063b7);
                 color: #fff;
+            }
+        }
+        &.has_2{
+            input[type="radio"] {
+                +label {
+                    width: 50%;
+                }
+            }
+        }
+        &.has_3{
+            input[type="radio"] {
+                +label {
+                    width: 33%;
+                }
+            }
+        }
+        &.has_4{
+            input[type="radio"] {
+                +label {
+                    width: 25%;
+                    @include screen('mobile') {
+                         font-size:1rem;
+                    }
+                }
+            }
+        }
+        &.has_5{
+            input[type="radio"] {
+                +label {
+                    width: 19%;
+                    @include screen('mobile') {
+                        font-size:1rem;
+                        width: 19.9%;
+                    }
+                }
             }
         }
     }

@@ -1,5 +1,11 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    if($('.schedule_select').length>0){
+        var dayLenght = $('.schedule_select').find('.radio_grp label').length;
+        $('.schedule_select').find('.radio_grp').addClass('has_'+dayLenght);
+    }
+
+
     if($('.modal').length>0){
         $('.modal').insertAfter('footer');
         $('.modal_overlay').insertAfter('footer');
@@ -77,7 +83,7 @@ $(function() {
 $(function() {
     $('.mp').append('<div class="mp_menu"><ul></ul></div>')
     $('.mp .sec').each(function() {
-        var SecHTML = $(this).find('.container').children('h2').html();
+        var SecHTML = $(this).find('.container h2').html();
         $('.mp .mp_menu ul').append('<li><a href="#"></a><div class="sec_topic">' + SecHTML + '</div></li>');
     });
     $('.mp .mp_menu ul li').each(function() {
