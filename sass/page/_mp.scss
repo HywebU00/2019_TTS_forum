@@ -5,7 +5,7 @@
         background: #FFF;
         z-index: 2;
         @include screen('mobile') {
-            padding: 2em 0;
+            padding: 0;
         }
     }
     .col-12 {
@@ -215,6 +215,15 @@
     z-index: 0;
     clip-path: inset(0px);
     clip: rect(0px auto auto 0px);
+    position: relative;
+    color: #fff;
+    padding: 1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    min-height: 20em;
+    background:darken($secondaryColor, 20);
+    @include screen('mobile') {
+        min-height:90vh;
+    }
     h2{
         position:absolute;
         left:-1500px;
@@ -228,12 +237,7 @@
         max-width:$container-max;
         margin: 0 auto;
     }
-    position: relative;
-    color: #fff;
-    padding: 1em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
-    min-height: 20em;
-    background:darken($secondaryColor, 20);
+
     .ex_building {
         position: fixed;
         width: 100%;
