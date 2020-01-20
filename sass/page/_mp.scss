@@ -59,9 +59,9 @@
             }
         }
         img {
-            width: 70px;
+            width: 100px;
             height: auto;
-            margin-top: 30px;
+            margin-top: 15px;
         }
         @include screen('mobile') {
             right: 65px;

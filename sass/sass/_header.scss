@@ -70,8 +70,8 @@
             right: 100px;
             font-size: 0em;
             @extend %mobileCtrlBtn;
-            bottom: 0px !important;
-            top: auto !important;
+            top: 0px !important;
+            bottom: auto !important;
             @include screen('mobile') {
                 right: 0;
             }

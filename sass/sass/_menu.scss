@@ -7,6 +7,7 @@
     float: right;
     // 預設選單 ul
     clear: both;
+    margin-left: 250px;
     >ul {
         text-align: left;
         margin: 0;
@@ -17,10 +18,10 @@
             vertical-align: top;
             min-width: 7em;
             line-height: 70px;
-            @include screen('tablet'){
+            @include screen('tablet') {
                 min-width: 5em;
             }
-            @include screen('mobile'){
+            @include screen('mobile') {
                 line-height: 2.5em;
             }
             >a {
@@ -32,12 +33,12 @@
                 color: #fff;
                 text-align: center;
                 font-size: 1.125em;
-                @include screen('tablet'){
+                @include screen('tablet') {
                     font-size: 1em;
                 }
-                &:hover,&:focus {
-                    background:$secondaryColor;
-                    color:#FFF;
+                &:hover, &:focus {
+                    background: $secondaryColor;
+                    color: #FFF;
                 }
             }
             &.hasChild {
@@ -98,12 +99,15 @@
         // 第二層選單樣式
         li {
             float: none;
+            margin: 0;
+            line-height: 1.5em;
             a {
-                padding: .6em 1.2em;
+                padding: .5em 1.2em;
                 color: #FFF;
                 font-weight: bold;
                 &:hover, &:focus {
                     background: $aHover;
+                    color: #FFF;
                 }
             }
         }
@@ -116,6 +120,11 @@
                 &:hover,
                 &:focus {
                     background: $primaryColor;
+                    &:after {
+                        border: 2px solid #FFF;
+                        border-bottom: none;
+                        border-left: none;
+                    }
                 }
                 &:after {
                     content: '';
@@ -124,8 +133,8 @@
                     top: 1.3em;
                     width: 6px;
                     height: 6px;
-                    border: 2px solid #FFF;
                     transform: rotate(45deg);
+                    border: 2px solid #FFF;
                     border-bottom: none;
                     border-left: none;
                 }
@@ -295,17 +304,16 @@
                 }
             }
         }
-        .language{
-            a{
+        .language {
+            a {
                 color: #fff;
                 text-align: left;
             }
-            li{
-                border:none;
-                a{
+            li {
+                border: none;
+                a {
                     background: $primaryColor;
                     padding-left: 1em !important;
-
                 }
             }
         }
@@ -375,7 +383,7 @@
                 top: 0;
                 padding: 0;
                 border: none;
-                background:none;
+                background: none;
                 li {
                     width: 100% !important;
                     a {
@@ -413,7 +421,7 @@
             border-top: none;
         }
         &:focus {
-            box-shadow:none;
+            box-shadow: none;
         }
     }
 }
