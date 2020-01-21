@@ -1056,3 +1056,12 @@ form {
 .keyword {
     color: red;
 }
+.address{
+    input[type="text"]:last-child{
+        min-width:20em;
+        @include screen('xs_mobile') {
+            min-width:auto;
+            width:100%;
+        }
+    }
+}
